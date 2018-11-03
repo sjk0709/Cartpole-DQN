@@ -9,7 +9,7 @@ I used Pytorch(0.4.1) for this example.
 * pytorch 0.4.1
 
 
-# Cartpole-DQN-pytorch041
+# Cartpole-DQN-tf140
 * OS X, Linux, Windows
 * Anaconda(Spyder)
 * python 3.6
