@@ -129,6 +129,9 @@ class DQN2015    :
         else:          
             print("\n--------First learning.--------\n")
       
+            
+        self.policyNet.to(self.device)
+        self.targetNet.to(self.device)
 
         self.policyOptimizer = torch.optim.Adam(self.policyNet.parameters(), lr=self.args.learning_rate, weight_decay=1e-5)        
         self.loss_func = nn.MSELoss()
@@ -381,10 +384,10 @@ def main():
             'training' : True ,
             'isGPU' : True,         # False, # True,
             'load_model': True,        
-            'save_folder_file': ("Cartpole0/",'checkpoint0'),       
-            'load_folder_file': ("Cartpole0/",'checkpoint0'),
+            'save_folder_file': ("Cartpole0/",'checkpoint1'),       
+            'load_folder_file': ("Cartpole0/",'checkpoint1'),
             'replayMemory' : 50000,          
-            'initialStepForOptimalModel' : 500,
+            'initialStepForOptimalModel' : 50000,
             'maxEpisodes': 5000,
             'batch_size' : 128,
             'learning_rate' : 1e-1,                            

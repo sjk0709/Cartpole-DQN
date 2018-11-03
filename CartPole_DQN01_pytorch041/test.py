@@ -83,8 +83,8 @@ def main():
         print("GPU is not availabe.")
     if args.isGPU==False:
         print("Runing by CPU")
+      
         
-
     # Constants defining our neural network
     input_size = env.observation_space.shape[0]
     output_size = env.action_space.n
